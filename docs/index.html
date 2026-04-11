@@ -139,15 +139,15 @@
     .drawer{
       position:fixed;
       top:0; left:0;
-      height:100vh;
-      width:min(390px, 88vw);
-      padding:24px 18px 24px;
+      height:100dvh;
+      width:min(400px, 90vw);
+      padding:20px 16px;
       overflow-y:auto;
       color:#fff;
       background:
-        radial-gradient(circle at top right, rgba(168,85,247,.35), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(59,130,246,.22), transparent 24%),
-        linear-gradient(180deg,#0f172a 0%,#111827 45%,#1e1b4b 100%);
+  radial-gradient(circle at top right, rgba(168,85,247,.25), transparent 35%),
+  radial-gradient(circle at bottom left, rgba(59,130,246,.18), transparent 30%),
+  linear-gradient(180deg,#0f172a 0%,#111827 55%,#1e1b4b 100%);
       box-shadow:0 20px 60px rgba(0,0,0,.45);
       transform:translateX(-110%);
       transition:transform .22s ease;
@@ -311,6 +311,12 @@
     }
     .footerLinks a{color:var(--primary); text-decoration:none; font-weight:800}
     .footerLinks a:hover{text-decoration:underline}
+    @media (max-width: 480px){
+  .drawer{
+    width:min(360px, 92vw);
+    padding:18px 14px;
+  }
+}
   </style>
 </head>
 
