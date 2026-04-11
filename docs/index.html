@@ -115,44 +115,180 @@
     .screen{display:none;}
     .screen.active{display:block;}
 
-    /* Menu lateral (C) */
+    /* Menu lateral premium */
     .menuBtn{
       border:1px solid var(--border);
       background:rgba(148,163,184,.10);
       color:var(--text);
-      width:44px; height:44px; border-radius:14px;
+      width:48px; height:48px; border-radius:16px;
       display:grid; place-items:center;
       cursor:pointer;
       box-shadow:var(--shadow);
+      font-size:18px;
+      font-weight:900;
     }
+
     .drawerOverlay{
-      position:fixed; inset:0; background:rgba(0,0,0,.35);
-      display:none; z-index:9998;
+      position:fixed; inset:0;
+      background:rgba(2, 6, 23, .45);
+      display:none;
+      z-index:9998;
+      backdrop-filter: blur(2px);
     }
+
     .drawer{
-      position:fixed; top:0; left:0; height:100vh; width:min(320px, 86vw);
-      background:var(--card); border-right:1px solid var(--border);
-      box-shadow:0 20px 60px rgba(0,0,0,.35);
+      position:fixed;
+      top:0; left:0;
+      height:100vh;
+      width:min(390px, 88vw);
+      padding:24px 18px 24px;
+      overflow-y:auto;
+      color:#fff;
+      background:
+        radial-gradient(circle at top right, rgba(168,85,247,.35), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(59,130,246,.22), transparent 24%),
+        linear-gradient(180deg,#0f172a 0%,#111827 45%,#1e1b4b 100%);
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
       transform:translateX(-110%);
       transition:transform .22s ease;
       z-index:9999;
-      display:flex; flex-direction:column;
+      display:flex;
+      flex-direction:column;
+      border-top-right-radius:28px;
+      border-bottom-right-radius:28px;
+      border-right:1px solid rgba(255,255,255,.08);
     }
+
     .drawer.open{transform:translateX(0);}
+
     .drawerHeader{
-      padding:14px; display:flex; align-items:center; justify-content:space-between; gap:10px;
-      border-bottom:1px solid var(--border);
+      padding:0 0 18px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:10px;
     }
-    .drawerList{padding:10px; display:flex; flex-direction:column; gap:10px;}
+
+    .drawer .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .drawer .logo{
+      width:64px;
+      height:64px;
+      border-radius:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      font-weight:950;
+      color:#fff;
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      box-shadow:0 10px 25px rgba(37,99,235,.35);
+    }
+
+    .drawer .sub{
+      margin-top:4px;
+      color:rgba(255,255,255,.72);
+      font-size:14px;
+    }
+
+    .drawerHeader .btn.secondary.small{
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:16px;
+      padding:10px 14px;
+      backdrop-filter:blur(8px);
+    }
+
+    .drawerList{
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
     .navItem{
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      padding:12px; border-radius:14px; cursor:pointer;
-      border:1px solid var(--border);
-      background:rgba(148,163,184,.08);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px;
+      border-radius:24px;
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.06);
+      box-shadow:0 10px 28px rgba(0,0,0,.22);
+      backdrop-filter:blur(10px);
       font-weight:900;
+      color:#fff;
     }
-    .navItem.active{border-color:rgba(11,92,255,.5); box-shadow:0 10px 25px rgba(11,92,255,.12);}
-    .navItem small{font-weight:700; color:var(--muted)}
+
+    .navItem.active{
+      border-color:rgba(96,165,250,.5);
+      box-shadow:0 0 0 1px rgba(96,165,250,.18), 0 10px 28px rgba(0,0,0,.22);
+    }
+
+    .navMain{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+      flex:1;
+    }
+
+    .navIcon{
+      width:56px;
+      height:56px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      flex-shrink:0;
+      background:linear-gradient(135deg, rgba(37,99,235,.95), rgba(124,58,237,.95));
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.18);
+    }
+
+    .navText{
+      min-width:0;
+      flex:1;
+    }
+
+    .navTitle{
+      font-size:18px;
+      font-weight:800;
+      line-height:1.2;
+      margin-bottom:4px;
+      color:#fff;
+    }
+
+    .navText small{
+      display:block;
+      font-size:14px;
+      line-height:1.35;
+      font-weight:700;
+      color:rgba(255,255,255,.72);
+    }
+
+    .navArrow{
+      font-size:30px;
+      line-height:1;
+      color:rgba(255,255,255,.72);
+      flex-shrink:0;
+    }
+
+    .drawerTip{
+      padding:18px 6px 4px;
+      margin-top:auto;
+      font-size:15px;
+      line-height:1.5;
+      color:rgba(255,255,255,.74);
+    }
 
     /* Treino */
     .planBox{border:1px solid var(--border); border-radius:14px; padding:12px; background:rgba(148,163,184,.08); margin-top:10px;}
@@ -184,10 +320,10 @@
   <nav class="drawer" id="drawer">
     <div class="drawerHeader">
       <div class="brand">
-        <div class="logo">LP</div>
+        <div class="logo">FP</div>
         <div>
-          <div style="font-weight:950">Fitness PRO</div>
-          <div class="sub">Menu</div>
+          <div style="font-weight:950; font-size:20px;">Fitness PRO</div>
+          <div class="sub">Treino, saúde e evolução</div>
         </div>
       </div>
       <button class="btn secondary small" id="drawerClose" type="button">Fechar</button>
@@ -195,34 +331,74 @@
 
     <div class="drawerList" id="navList">
       <div class="navItem active" data-screen="screen-imc">
-        <div>🧮 IMC</div>
-        <small>IMC + calorias</small>
+        <div class="navMain">
+          <div class="navIcon">📊</div>
+          <div class="navText">
+            <div class="navTitle">IMC</div>
+            <small>Cálculo de IMC e calorias</small>
+          </div>
+        </div>
+        <div class="navArrow">›</div>
       </div>
+
       <div class="navItem" data-screen="screen-treino">
-        <div>💪 Treino</div>
-        <small>Gerar e salvar</small>
+        <div class="navMain">
+          <div class="navIcon">💪</div>
+          <div class="navText">
+            <div class="navTitle">Treino</div>
+            <small>Gere e salve seus treinos</small>
+          </div>
+        </div>
+        <div class="navArrow">›</div>
       </div>
+
       <div class="navItem" data-screen="screen-timer">
-        <div>⏱ Cronômetro</div>
-        <small>Simples e HIIT</small>
+        <div class="navMain">
+          <div class="navIcon">⏱️</div>
+          <div class="navText">
+            <div class="navTitle">Cronômetro</div>
+            <small>Modo simples e HIIT</small>
+          </div>
+        </div>
+        <div class="navArrow">›</div>
       </div>
+
       <div class="navItem" data-screen="screen-acomp">
-        <div>📊 Acompanhamento</div>
-        <small>carga + reps</small>
+        <div class="navMain">
+          <div class="navIcon">📈</div>
+          <div class="navText">
+            <div class="navTitle">Acompanhamento</div>
+            <small>Carga, repetições e evolução</small>
+          </div>
+        </div>
+        <div class="navArrow">›</div>
       </div>
+
       <div class="navItem" data-screen="screen-metas">
-        <div>🎯 Metas</div>
-        <small>água, peso, macros</small>
+        <div class="navMain">
+          <div class="navIcon">🎯</div>
+          <div class="navText">
+            <div class="navTitle">Metas</div>
+            <small>Água, peso e macros</small>
+          </div>
+        </div>
+        <div class="navArrow">›</div>
       </div>
+
       <div class="navItem" onclick="window.location.href='./dicionario/'">
-  <div>📘 Dicionário</div>
-  <small>Exercícios explicados</small>
-</div>
+        <div class="navMain">
+          <div class="navIcon">📘</div>
+          <div class="navText">
+            <div class="navTitle">Dicionário</div>
+            <small>Exercícios explicados</small>
+          </div>
+        </div>
+        <div class="navArrow">›</div>
+      </div>
     </div>
 
-    <div style="padding:14px; margin-top:auto; border-top:1px solid var(--border);" class="mini">
-      Dica: tudo é salvo neste aparelho.<br>
-      (localStorage)
+    <div class="drawerTip">
+      Seus registros são salvos automaticamente no dispositivo.
     </div>
   </nav>
 
