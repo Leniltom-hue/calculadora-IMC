@@ -321,6 +321,12 @@
 </head>
 
 <body>
+  <script>
+if(!localStorage.getItem("logado")){
+window.location.href = "login.html"
+}
+</script>
+  
   <div class="drawerOverlay" id="drawerOverlay"></div>
 
   <nav class="drawer" id="drawer">
