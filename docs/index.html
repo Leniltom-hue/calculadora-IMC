@@ -908,9 +908,9 @@ window.location.href = "login.html"
     // =========================
     // MENU LATERAL (C)
     // =========================
-    const drawer = $("drawer");
-    const overlay = $("drawerOverlay");
-    const navList = $("navList");
+    const drawer = document.getElementById("drawer");
+const overlay = document.getElementById("drawerOverlay");
+const navList = document.getElementById("navList");
 
     function openDrawer(){
       drawer.classList.add("open");
@@ -920,8 +920,8 @@ window.location.href = "login.html"
       drawer.classList.remove("open");
       overlay.style.display = "none";
     }
-    $("drawerOpen").addEventListener("click", openDrawer);
-    $("drawerClose").addEventListener("click", closeDrawer);
+document.getElementById("drawerOpen").addEventListener("click", openDrawer);
+document.getElementById("drawerClose").addEventListener("click", closeDrawer);    
     overlay.addEventListener("click", closeDrawer);
 
     function showScreen(id){
