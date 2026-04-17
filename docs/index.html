@@ -1847,47 +1847,16 @@ const firebaseConfig = {
 // Iniciar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
-// Login
-window.login = function(){
-
-let email = document.getElementById("email").value
-let senha = document.getElementById("senha").value
-
-signInWithEmailAndPassword(auth, email, senha)
-.then(() => {
-
-alert("Login feito com sucesso")
-window.location.href = "index.html"
-
-})
-.catch((error) => {
-
-alert(error.message)
-
-});
-
-}
-
-// Cadastro
-window.cadastrar = function(){
-
-let email = document.getElementById("email").value
-let senha = document.getElementById("senha").value
-
-createUserWithEmailAndPassword(auth, email, senha)
-.then(() => {
-
-alert("Conta criada com sucesso")
-
-})
-.catch((error) => {
-
-alert(error.message)
-
-});
-}
-</script>   
+// Logout
+window.logout = function () {
+  signOut(auth).then(() => {
+    localStorage.removeItem("logado");
+    alert("Saiu da conta");
+    window.location.href = "login.html";
+  }).catch((error) => {
+    alert(error.message);
+  });
+  
     }
   </script>
 </body>
