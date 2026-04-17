@@ -1869,6 +1869,17 @@ window.logout = function () {
     alert(error.message);
   });
 }
+<script>
+const dadosPerfil = JSON.parse(localStorage.getItem("perfil_usuario_v1") || "{}");
+const userInfo = document.getElementById("userInfo");
+
+if (userInfo) {
+  if (dadosPerfil.nome) {
+    userInfo.textContent = "Olá, " + dadosPerfil.nome;
+  } else {
+    userInfo.textContent = "Complete seu perfil";
+  }
+}
 </script>
 </body>
 </html>
