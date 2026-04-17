@@ -439,7 +439,7 @@ window.location.href = "login.html"
 
   <div class="app">
     <div class="header">
-      <button class="menuBtn" id="drawerOpen" type="button" aria-label="Abrir menu">☰</button>
+  <button class="menuBtn" id="drawerOpen" type="button" aria-label="Abrir menu" onclick="openDrawer()">☰</button>    
 
       <div class="brand">
         <div class="logo">IMC</div>
@@ -920,7 +920,7 @@ const navList = document.getElementById("navList");
       drawer.classList.remove("open");
       overlay.style.display = "none";
     }
-document.getElementById("drawerOpen").addEventListener("click", openDrawer);
+document.getElementById("drawerOpen").addEventListener("click", openDrawer);    
 document.getElementById("drawerClose").addEventListener("click", closeDrawer);    
     overlay.addEventListener("click", closeDrawer);
 
