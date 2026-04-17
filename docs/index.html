@@ -938,12 +938,6 @@ document.getElementById("drawerClose").addEventListener("click", closeDrawer);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    navList.addEventListener("click", (e) => {
-      const item = e.target.closest(".navItem");
-      if(!item) return;
-      showScreen(item.dataset.screen);
-    });
-
     // =========================
     // TEMA
     // =========================
