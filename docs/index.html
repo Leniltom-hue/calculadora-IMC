@@ -356,8 +356,12 @@ window.location.href = "login.html"
 
 <div class="navItem" onclick="
 document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
+document.getElementById('screen-imc').classList.remove('active');
 document.getElementById('screen-treino').classList.add('active');
-alert(document.getElementById('screen-treino').className);
+alert(
+  'IMC: ' + document.getElementById('screen-imc').className + '\n' +
+  'TREINO: ' + document.getElementById('screen-treino').className
+);
 ">
   <div class="navMain">
     <div class="navIcon">💪</div>
