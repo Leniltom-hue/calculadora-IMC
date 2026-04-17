@@ -943,9 +943,6 @@ window.showScreen = function(id){
     n.classList.remove("active");
   });
 
-  document.querySelectorAll(`[data-screen="${id}"]`).forEach(function(n){
-    n.classList.add("active");
-  });
 
   closeDrawer();
   window.scrollTo({ top: 0, behavior: "smooth" });
