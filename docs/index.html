@@ -439,7 +439,8 @@ window.location.href = "login.html"
 
   <div class="app">
     <div class="header">
-<button class="menuBtn" id="drawerOpen" type="button" aria-label="Abrir menu" onclick="alert('clicou')">☰</button>      
+  <button class="menuBtn" id="drawerOpen" type="button" aria-label="Abrir menu"
+onclick="document.getElementById('drawer').classList.add('open');document.getElementById('drawerOverlay').style.display='block'">☰</button>    
 
       <div class="brand">
         <div class="logo">IMC</div>
