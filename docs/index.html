@@ -354,16 +354,20 @@ window.location.href = "login.html"
     <div class="navArrow">›</div>
   </div>
 
-  <div class="navItem" onclick="showScreen('screen-treino')">
-    <div class="navMain">
-      <div class="navIcon">💪</div>
-      <div class="navText">
-        <div class="navTitle">Treino</div>
-        <small>Gere e salve seus treinos</small>
-      </div>
+<div class="navItem" onclick="
+alert('clicou treino');
+document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
+document.getElementById('screen-treino').classList.add('active');
+">
+  <div class="navMain">
+    <div class="navIcon">💪</div>
+    <div class="navText">
+      <div class="navTitle">Treino</div>
+      <small>Gere e salve seus treinos</small>
     </div>
-    <div class="navArrow">›</div>
   </div>
+  <div class="navArrow">›</div>
+</div>
 
   <div class="navItem" onclick="showScreen('screen-timer')">
     <div class="navMain">
