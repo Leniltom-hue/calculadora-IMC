@@ -342,82 +342,95 @@ window.location.href = "login.html"
       <button class="btn secondary small" id="drawerClose" type="button">Fechar</button>
     </div>
 
-    <div class="drawerList" id="navList">
-      <div class="navItem active" data-screen="screen-imc">
-        <div class="navMain">
-          <div class="navIcon">📊</div>
-          <div class="navText">
-            <div class="navTitle">IMC</div>
-            <small>Cálculo de IMC e calorias</small>
-          </div>
-        </div>
-        
-        <div class="navArrow">›</div>
-<div class="navItem" onclick="window.location.href='./perfil.html'">
-  <div class="navMain">
-    <div class="navIcon">👤</div>
-    <div class="navText">
-      <div class="navTitle">Perfil</div>
-      <small>Seus dados pessoais</small>
+ <div class="drawerList" id="navList">
+  <div class="navItem active" data-screen="screen-imc">
+    <div class="navMain">
+      <div class="navIcon">📊</div>
+      <div class="navText">
+        <div class="navTitle">IMC</div>
+        <small>Cálculo de IMC e calorias</small>
+      </div>
     </div>
+    <div class="navArrow">›</div>
   </div>
-  <div class="navArrow">›</div>
-</div>      
-      <div class="navItem" data-screen="screen-treino">
-        <div class="navMain">
-          <div class="navIcon">💪</div>
-          <div class="navText">
-            <div class="navTitle">Treino</div>
-            <small>Gere e salve seus treinos</small>
-          </div>
-        </div>
-        <div class="navArrow">›</div>
-      </div>
 
-      <div class="navItem" data-screen="screen-timer">
-        <div class="navMain">
-          <div class="navIcon">⏱️</div>
-          <div class="navText">
-            <div class="navTitle">Cronômetro</div>
-            <small>Modo simples e HIIT</small>
-          </div>
-        </div>
-        <div class="navArrow">›</div>
-      </div>
-
-      <div class="navItem" data-screen="screen-acomp">
-        <div class="navMain">
-          <div class="navIcon">📈</div>
-          <div class="navText">
-            <div class="navTitle">Acompanhamento</div>
-            <small>Carga, repetições e evolução</small>
-          </div>
-        </div>
-        <div class="navArrow">›</div>
-      </div>
-
-      <div class="navItem" data-screen="screen-metas">
-        <div class="navMain">
-          <div class="navIcon">🎯</div>
-          <div class="navText">
-            <div class="navTitle">Metas</div>
-            <small>Água, peso e macros</small>
-          </div>
-        </div>
-        <div class="navArrow">›</div>
-      </div>
-
-      <div class="navItem" onclick="window.location.href='./dicionario/'">
-        <div class="navMain">
-          <div class="navIcon">📘</div>
-          <div class="navText">
-            <div class="navTitle">Dicionário</div>
-            <small>Exercícios explicados</small>
-          </div>
-        </div>
-        <div class="navArrow">›</div>
+  <div class="navItem" onclick="window.location.href='./perfil.html'">
+    <div class="navMain">
+      <div class="navIcon">👤</div>
+      <div class="navText">
+        <div class="navTitle">Perfil</div>
+        <small>Seus dados pessoais</small>
       </div>
     </div>
+    <div class="navArrow">›</div>
+  </div>
+
+  <div class="navItem" data-screen="screen-treino">
+    <div class="navMain">
+      <div class="navIcon">💪</div>
+      <div class="navText">
+        <div class="navTitle">Treino</div>
+        <small>Gere e salve seus treinos</small>
+      </div>
+    </div>
+    <div class="navArrow">›</div>
+  </div>
+
+  <div class="navItem" data-screen="screen-timer">
+    <div class="navMain">
+      <div class="navIcon">⏱️</div>
+      <div class="navText">
+        <div class="navTitle">Cronômetro</div>
+        <small>Modo simples e HIIT</small>
+      </div>
+    </div>
+    <div class="navArrow">›</div>
+  </div>
+
+  <div class="navItem" data-screen="screen-acomp">
+    <div class="navMain">
+      <div class="navIcon">📈</div>
+      <div class="navText">
+        <div class="navTitle">Acompanhamento</div>
+        <small>Carga, repetições e evolução</small>
+      </div>
+    </div>
+    <div class="navArrow">›</div>
+  </div>
+
+  <div class="navItem" data-screen="screen-metas">
+    <div class="navMain">
+      <div class="navIcon">🎯</div>
+      <div class="navText">
+        <div class="navTitle">Metas</div>
+        <small>Água, peso e macros</small>
+      </div>
+    </div>
+    <div class="navArrow">›</div>
+  </div>
+
+  <div class="navItem" onclick="window.location.href='./dicionario/'">
+    <div class="navMain">
+      <div class="navIcon">📘</div>
+      <div class="navText">
+        <div class="navTitle">Dicionário</div>
+        <small>Exercícios explicados</small>
+      </div>
+    </div>
+    <div class="navArrow">›</div>
+  </div>
+
+  <div class="navItem" onclick="logout()">
+    <div class="navMain">
+      <div class="navIcon">🚪</div>
+      <div class="navText">
+        <div class="navTitle">Sair</div>
+        <small>Encerrar sessão</small>
+      </div>
+    </div>
+    <div class="navArrow">›</div>
+  </div>
+</div>   
 
     <div class="drawerTip">
       Seus registros são salvos automaticamente no dispositivo.
