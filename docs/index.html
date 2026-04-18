@@ -339,15 +339,10 @@ window.location.href = "login.html"
         <div id="userInfo" class="sub"></div>  
         </div>
       </div>
-<button class="btn secondary small"
-        id="drawerClose"
-        type="button"
-        onclick="closeDrawer()">
+<button class="btn secondary small" type="button"
+onclick="alert('clicou fechar');document.getElementById('drawer').classList.remove('open');document.getElementById('drawerOverlay').style.display='none';">
   Fechar
 </button>
-      
-      <button class="btn secondary small" id="drawerClose" type="button">Fechar</button>
-    </div>
 
 <div class="drawerList" id="navList">
   <div class="navItem active" onclick="showScreen('screen-imc')">
